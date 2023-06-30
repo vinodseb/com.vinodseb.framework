@@ -8,5 +8,6 @@ include(
         "framework.frontend",
         "framework.backend",
         "framework.utilities",
-        "framework.renderer"
+        "framework.renderer",
+        "framework.furniture"
 )
