@@ -7,5 +7,6 @@ rootProject.name = "framework"
 include(
         "framework.frontend",
         "framework.backend",
-        "framework.utilities"
+        "framework.utilities",
+        "framework.renderer"
 )
