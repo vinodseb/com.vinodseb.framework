@@ -8,16 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:31.1-jre")
     project(":framework.utilities")
-}
-
-testing {
-    suites {
-        val test by getting(JvmTestSuite::class) {
-            useKotlinTest("1.8.20")
-        }
-    }
 }
 
 java {

@@ -8,15 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-}
-
-testing {
-    suites {
-        val test by getting(JvmTestSuite::class) {
-            useKotlinTest("1.8.20")
-        }
-    }
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 }
 
 java {

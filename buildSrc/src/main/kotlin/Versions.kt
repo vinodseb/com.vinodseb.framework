@@ -1,4 +1,4 @@
 
-const val ktorVersion = "2.3.2"
-const val logbackVersion = "1.4.8"
-const val kotlinVersion = "1.9.0-RC"
+const val ktor_version = "2.3.2"
+const val logback_version = "1.4.8"
+const val kotlin_version = "1.9.0-RC"
