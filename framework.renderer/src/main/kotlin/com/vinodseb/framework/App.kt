@@ -13,7 +13,7 @@ fun main() {
             mustacheFactory = DefaultMustacheFactory("templates")
         }
         routing {
-            page()
+            pageRoute()
         }
     }.start(wait = true)
 }
