@@ -19,9 +19,9 @@ dependencies {
     implementation("io.ktor:ktor-server-mustache:$ktorVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
 
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
+    implementation(project(":framework.utilities"))
 
-    project(":framework.utilities")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
 
 testing {

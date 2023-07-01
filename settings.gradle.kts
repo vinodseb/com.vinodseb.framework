@@ -4,10 +4,8 @@ plugins {
 
 rootProject.name = "framework"
 
-include(
-        "framework.frontend",
-        "framework.backend",
-        "framework.utilities",
-        "framework.renderer",
-        "framework.furniture"
-)
+include("framework.frontend")
+include("framework.backend")
+include("framework.utilities")
+include("framework.renderer")
+include("framework.frontend")
