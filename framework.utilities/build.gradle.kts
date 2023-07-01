@@ -1,6 +1,6 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.8.20"
-    application
+    `java-library`
 }
 
 repositories {
@@ -8,7 +8,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:31.1-jre")
 }
 
 testing {
@@ -23,8 +22,4 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
-}
-
-application {
-    mainClass.set("com.vinodseb.framework.AppKt")
 }
