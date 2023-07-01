@@ -1,22 +1,16 @@
 package com.vinodseb.framework
 
-import com.github.mustachejava.DefaultMustacheFactory
 import io.ktor.server.application.*
-import io.ktor.server.engine.*
-import io.ktor.server.mustache.*
 import io.ktor.server.netty.*
+import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
-fun main() {
-    embeddedServer(Netty, port = 8080) {
-        install(Mustache) {
-            mustacheFactory = DefaultMustacheFactory("templates")
+fun main(args: Array<String>) = EngineMain.main(args)
+
+fun Application.module() {
+    routing {
+        get("/") {
+            call.respondText("Hello, world!")
         }
-        routing {
-            favicon()
-            static()
-            hello()
-            page()
-        }
-    }.start(wait = true)
+    }
 }
