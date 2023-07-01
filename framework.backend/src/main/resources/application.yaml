@@ -1,7 +1,7 @@
 ktor:
   development: true
   deployment:
-    port: 8081
+    port: "$PORT:8081"
   application:
     modules:
       - com.vinodseb.framework.AppKt.module
