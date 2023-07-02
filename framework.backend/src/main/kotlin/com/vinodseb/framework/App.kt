@@ -11,5 +11,6 @@ fun Application.module() {
     log.info("Running application module")
 
     routing {
+        swaggerRoute()
     }
 }

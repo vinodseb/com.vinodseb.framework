@@ -3,6 +3,7 @@ package com.vinodseb.framework
 import com.vinodseb.framework.model.Page
 import io.ktor.server.application.*
 import io.ktor.server.mustache.*
+import io.ktor.server.plugins.swagger.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
@@ -18,3 +19,6 @@ fun Route.pageRoute() =
 
             call.respond(MustacheContent("page.hbs", mapOf("page" to page)))
         }
+
+fun Route.swaggerRoute() =
+    swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")

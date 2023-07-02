@@ -12,6 +12,7 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml:${ktor_version}")
     implementation("io.ktor:ktor-server-core:${ktor_version}")
     implementation("io.ktor:ktor-server-netty:${ktor_version}")
+    implementation("io.ktor:ktor-server-swagger:$ktor_version")
 
     // Logging dependencies
     implementation("ch.qos.logback:logback-classic:$logback_version")
