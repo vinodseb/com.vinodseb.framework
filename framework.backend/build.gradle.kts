@@ -8,9 +8,13 @@ repositories {
 }
 
 dependencies {
+    // Ktor dependencies
     implementation("io.ktor:ktor-server-config-yaml:${ktor_version}")
+
+    // Logging dependencies
     implementation("ch.qos.logback:logback-classic:$logback_version")
 
+    // Project dependencies
     project(":framework.utilities")
 }
 
