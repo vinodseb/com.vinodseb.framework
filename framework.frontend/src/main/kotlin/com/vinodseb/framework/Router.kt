@@ -1,6 +1,6 @@
 package com.vinodseb.framework
 
-import com.vinodseb.framework.controller.handlePageRequest
+import com.vinodseb.framework.controller.renderContent
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
@@ -27,7 +27,7 @@ fun Route.pageRoute() = get("{locale...}") {
 
     when {
         isUnsupportedLocale(locale) -> call.respondText("Unsupported locale")
-        else -> handlePageRequest(path).fold(
+        else -> renderContent(path).fold(
             onSuccess = {
                 call.respondText(it, ContentType.Text.Html)
             },
