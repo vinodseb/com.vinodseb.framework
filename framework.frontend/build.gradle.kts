@@ -17,6 +17,7 @@ dependencies {
     implementation("io.ktor:ktor-client-cio:$ktor_version")
     implementation("io.ktor:ktor-client-logging:$ktor_version")
     implementation("io.ktor:ktor-server-config-yaml:${ktor_version}")
+
     implementation("ch.qos.logback:logback-classic:$logback_version")
 
     implementation(project(":framework.utilities"))

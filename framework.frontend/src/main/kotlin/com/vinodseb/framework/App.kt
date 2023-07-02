@@ -7,6 +7,9 @@ import io.ktor.server.routing.*
 fun main(args: Array<String>) = EngineMain.main(args)
 
 fun Application.module() {
+
+    log.info("Running application module")
+
     routing {
         faviconRoute()
         staticRoute()

@@ -1,9 +1,6 @@
 package com.vinodseb.framework
 
-import com.vinodseb.framework.client.client
-import com.vinodseb.framework.model.Page
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
+import com.vinodseb.framework.controller.handlePageRequest
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
@@ -19,17 +16,13 @@ fun Route.staticRoute() {
 }
 
 fun Route.pageRoute() = get("/page") {
-    runCatching {
-        client.post("http://localhost:8082/page") {
-            contentType(ContentType.Application.Json)
-            setBody(Page("Some Random Title"))
-        }
-    }.fold(
+    handlePageRequest()
+        .fold(
             onSuccess = {
-                call.respondText(it.bodyAsText(), ContentType.Text.Html)
+                call.respondText(it, ContentType.Text.Html)
             },
             onFailure = {
                 call.respondText(it.message.toString())
             }
-    )
+        )
 }
