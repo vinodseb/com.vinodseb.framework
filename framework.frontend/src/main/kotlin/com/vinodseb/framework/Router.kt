@@ -15,7 +15,7 @@ fun Route.staticRoute() {
     staticResources("/static", "assets")
 }
 
-fun Route.pageRoute() = get("/page") {
+fun Route.pageRoute() = get("/") {
     handlePageRequest()
         .fold(
             onSuccess = {
