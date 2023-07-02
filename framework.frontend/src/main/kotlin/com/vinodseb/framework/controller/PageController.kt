@@ -7,13 +7,13 @@ import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.util.logging.*
 
-internal val log = KtorSimpleLogger("PageController")
-suspend fun handlePageRequest() =
+private val Log = KtorSimpleLogger("PageController")
+suspend fun handlePageRequest(path: String) =
     runCatching {
         client.post("http://localhost:8082/page") {
             contentType(ContentType.Application.Json)
-            setBody(Page("Some Random Title"))
+            setBody(Page("Some Random Title $path"))
         }.bodyAsText().also {
-            log.trace(it)
+            Log.trace(it)
         }
     }
