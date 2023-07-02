@@ -15,5 +15,6 @@ fun Application.module() {
 
     routing {
         swaggerRoute()
+        testRoute()
     }
 }
