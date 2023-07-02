@@ -1,7 +1,7 @@
 plugins {
-    `java-library`
-    kotlin("jvm") version "1.8.21"
+    kotlin("jvm")
     kotlin("plugin.serialization") version "1.8.21"
+    `java-library`
 }
 
 repositories {
@@ -14,6 +14,10 @@ dependencies {
 
     // Logging dependencies
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    // Test dependencies
+    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
 
 java {

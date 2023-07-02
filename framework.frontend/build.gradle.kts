@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.8.20"
+    kotlin("jvm")
     application
 }
 
@@ -23,6 +23,7 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
 
     // Test dependencies
+    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
     // Project dependencies
