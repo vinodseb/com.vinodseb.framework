@@ -17,6 +17,11 @@ fun Route.faviconRoute() =
 fun Route.staticRoute() =
     staticResources("/static", "assets")
 
+fun Route.testRoute() =
+    get("/test") {
+        call.respondText("<html><body>success</body></html>", ContentType.Text.Html)
+    }
+
 fun Route.pageRoute() = get("{locale...}") {
 
     val locale = call.parameters["locale"].orEmpty()

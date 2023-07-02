@@ -16,6 +16,7 @@ fun Application.module() {
     routing {
         faviconRoute()
         staticRoute()
+        testRoute()
         pageRoute()
     }
 }
