@@ -6,7 +6,6 @@ import io.ktor.server.application.*
 import io.ktor.server.mustache.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.contentnegotiation.*
-import io.ktor.server.plugins.swagger.*
 import io.ktor.server.routing.*
 import kotlinx.serialization.json.Json
 

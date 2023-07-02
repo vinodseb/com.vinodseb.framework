@@ -32,5 +32,5 @@ java {
 }
 
 application {
-    mainClass.set("com.vinodseb.framework.AppKt")
+    mainClass.set("com.vinodseb.framework.ApplicationKt")
 }

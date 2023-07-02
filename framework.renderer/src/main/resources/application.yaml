@@ -4,4 +4,4 @@ ktor:
     port: "$PORT:8082"
   application:
     modules:
-      - com.vinodseb.framework.AppKt.module
+      - com.vinodseb.framework.ApplicationKt.module
