@@ -22,7 +22,8 @@ fun Application.module() {
         })
     }
     routing {
-        pageRoute()
         swaggerRoute()
+        testRoute()
+        pageRoute()
     }
 }

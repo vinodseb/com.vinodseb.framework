@@ -1,6 +1,7 @@
 package com.vinodseb.framework
 
 import com.vinodseb.framework.model.Page
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.mustache.*
 import io.ktor.server.plugins.swagger.*
@@ -22,3 +23,7 @@ fun Route.pageRoute() =
 
 fun Route.swaggerRoute() =
     swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
+
+fun Route.testRoute() = get("/test") {
+    call.respondText("<div>furniture</div>", ContentType.Text.Html)
+}
