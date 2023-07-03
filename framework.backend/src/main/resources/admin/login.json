@@ -1,3 +1,19 @@
 {
-  "title": "Login Page"
+  "title": "Login Page",
+  "header": {
+    "logo": {},
+    "menu": {},
+    "search": {}
+  },
+  "footer": {
+    "corporate": {},
+    "global": {}
+  },
+  "body": {
+    "top": [],
+    "left": [],
+    "main": [],
+    "right": [],
+    "bottom": []
+  }
 }
