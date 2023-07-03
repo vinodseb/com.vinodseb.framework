@@ -16,6 +16,8 @@ fun Application.module() {
 
     Log.info("Running application module")
 
+    install(IgnoreTrailingSlash)
+
     install(ContentNegotiation) {
         json(Json {
             isLenient = true
@@ -26,5 +28,6 @@ fun Application.module() {
         swaggerRoute()
         testRoute()
         pageRoute()
+        staticRoute()
     }
 }
