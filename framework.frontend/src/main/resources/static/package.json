@@ -1,0 +1,26 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "author": "vinodseb <vinod.sabastian@gmail.com>",
+  "description": "Editorial by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinodseb/com.vinodseb.framework.git"
+  },
+  "keywords": [
+    "vinodseb"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinodseb/com.vinodseb.framework/issues"
+  },
+  "homepage": "https://github.com/vinodseb/com.vinodseb.framework#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "sass": "node-sass assets/sass/main.scss -o assets/css/"
+  },
+  "dependencies": {
+    "node-sass" : ">=6.0"
+  }
+}

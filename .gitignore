@@ -6,3 +6,6 @@ build
 
 # Ignore IDE settings
 .idea
+
+# Ignore node_modules
+node_modules
