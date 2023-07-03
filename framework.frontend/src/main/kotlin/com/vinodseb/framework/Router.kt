@@ -11,10 +11,10 @@ import io.ktor.util.logging.*
 private val Log = KtorSimpleLogger("Router")
 
 fun Route.faviconRoute() =
-    staticResources("/favicon.ico", "assets", "/images/favicon.svg")
+    staticResources("/favicon.ico", "static", "/images/favicon.svg")
 
 fun Route.staticRoute() =
-    staticResources("/static", "assets")
+    staticResources("/static", "static")
 
 fun Route.testRoute() =
     get("/test") {
