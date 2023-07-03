@@ -21,6 +21,6 @@
     "sass": "node-sass assets/sass/main.scss -o assets/css/"
   },
   "dependencies": {
-    "node-sass" : ">=6.0"
+    "node-sass" : ">=9.0"
   }
 }

@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+//    id("com.github.node-gradle.node") version "5.0.0"
     application
 }
 
@@ -29,6 +30,9 @@ dependencies {
 
     // Project dependencies
     implementation(project(":framework.utilities"))
+
+    //
+    implementation(npm("node-sass", ">=6.0"))
 }
 
 java {
@@ -39,4 +43,16 @@ java {
 
 application {
     mainClass.set("com.vinodseb.framework.ApplicationKt")
+    project.tasks["build"].dependsOn("sass")
+}
+
+task<Exec>("sass") {
+    dependsOn("npmInstall")
+    workingDir("src/main/resources/static")
+    commandLine( "npm", "run", "sass")
+}
+
+task<Exec>("npmInstall") {
+    workingDir("src/main/resources/static")
+    commandLine( "npm", "install")
 }
