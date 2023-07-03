@@ -4,7 +4,6 @@ import com.vinodseb.framework.controller.renderContent
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.http.content.*
-import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.util.logging.*
@@ -22,10 +21,10 @@ fun Route.testRoute() =
         call.respondText("<html><body>success</body></html>", ContentType.Text.Html)
     }
 
-fun Route.pageRoute() = get("{locale...}") {
+fun Route.pageRoute() = get("/{locale}/{path...}") {
 
     val locale = call.parameters["locale"].orEmpty()
-    val path = call.request.path()
+    val path = call.parameters.getAll("path").orEmpty().joinToString("/")
 
     Log.info("Locale: $locale")
     Log.info("Path: $path")

@@ -2,19 +2,18 @@ package com.vinodseb.framework.client
 
 import com.vinodseb.framework.model.Page
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.util.logging.*
 import kotlinx.serialization.json.Json
 
-object RendererClient {
+object BackendClient {
 
-    private val Log = KtorSimpleLogger("RendererClient")
+    private val Log = KtorSimpleLogger("BackendClient")
 
     private val client = HttpClient(CIO) {
         install(ContentNegotiation) {
@@ -27,11 +26,9 @@ object RendererClient {
         expectSuccess = true
     }
 
-    suspend fun post(page: Page) =
-        client.post("http://localhost:8082/page") {
-            contentType(ContentType.Application.Json)
-            setBody(page)
-        }.bodyAsText().also {
-            Log.trace(it)
+    suspend fun get(path: String): Page =
+        client.get("http://localhost:8081/$path").body<Page>().also {
+            Log.info("Requested path: $path")
         }
 }
+

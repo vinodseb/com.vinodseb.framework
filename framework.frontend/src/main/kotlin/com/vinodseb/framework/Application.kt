@@ -13,6 +13,8 @@ fun Application.module() {
 
     Log.info("Running application module")
 
+    install(IgnoreTrailingSlash)
+
     routing {
         faviconRoute()
         staticRoute()
