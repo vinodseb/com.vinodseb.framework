@@ -142,7 +142,8 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0; }
 
 h1 {
-  font-size: 4em;
+  color: #996666;
+  font-size: 2.8em;
   margin: 0 0 0.5em 0;
   line-height: 1.3; }
 
@@ -163,15 +164,15 @@ h6 {
 
 @media screen and (max-width: 1680px) {
   h1 {
-    font-size: 3.5em; } }
+    font-size: 2.5em; } }
 
 @media screen and (max-width: 980px) {
   h1 {
-    font-size: 3.25em; } }
+    font-size: 2.2em; } }
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     line-height: 1.4; }
   h2 {
     font-size: 1.5em; } }
