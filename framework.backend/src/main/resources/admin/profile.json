@@ -1,19 +1,9 @@
 {
   "title": "Profile Page",
   "header": {
-    "logo": {},
-    "menu": {},
-    "search": {}
+    "template": "html",
+    "content": "<a href=\"/en/admin/home\" class=\"logo\"><strong>Framework</strong> by vinodseb</a>"
   },
-  "footer": {
-    "corporate": {},
-    "global": {}
-  },
-  "body": {
-    "top": [],
-    "left": [],
-    "main": [],
-    "right": [],
-    "bottom": []
-  }
+  "main": [],
+  "sidebar": []
 }

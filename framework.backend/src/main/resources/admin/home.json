@@ -2,17 +2,14 @@
   "title": "Home Page",
   "header": {
     "template": "html",
-    "content": "            <header id=\"header\">\n                <a href=\"/en/admin/home\" class=\"logo\"><strong>Editorial</strong> by HTML5 UP</a>\n                <ul class=\"icons\">\n                    <li><a href=\"#\" class=\"icon brands fa-twitter\"><span class=\"label\">Twitter</span></a></li>\n                    <li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li>\n                    <li><a href=\"#\" class=\"icon brands fa-snapchat-ghost\"><span class=\"label\">Snapchat</span></a></li>\n                    <li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li>\n                    <li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li>\n                </ul>\n            </header>"
+    "content": "<a href=\"/en/admin/home\" class=\"logo\"><strong>Framework</strong> by vinodseb</a>"
   },
-  "footer": {
-    "corporate": {},
-    "global": {}
+  "banner": {
+    "header": "Banner Header",
+    "content": "some random <strong>html</strong> to populate banner content",
+    "link": "/en/admin/home",
+    "image": "/static/images/pic10.jpg"
   },
-  "body": {
-    "top": [],
-    "left": [],
-    "main": [],
-    "right": [],
-    "bottom": []
-  }
+  "main": [],
+  "sidebar": []
 }
