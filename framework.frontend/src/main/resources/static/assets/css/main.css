@@ -2186,11 +2186,15 @@ button,
       max-height: 35vh; } }
 
 /* Footer */
-#footer .copyright {
-  color: #9fa3a6;
-  font-size: 0.9em; }
-  #footer .copyright a {
-    color: inherit; }
+#footer {
+  border-top: solid 5px #996666;
+  padding: 1em 0 1em 0;
+  text-align: center; }
+  #footer .copyright {
+    color: #9fa3a6;
+    font-size: 0.9em; }
+    #footer .copyright a {
+      color: inherit; }
 
 /* Menu */
 #menu ul {

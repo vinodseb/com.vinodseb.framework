@@ -7,6 +7,9 @@
 /* Footer */
 
 	#footer {
+	    border-top: solid 5px _palette(accent);
+	    padding: 1em 0 1em 0;
+	    text-align: center;
 		.copyright {
 			color: _palette(fg-light);
 			font-size: 0.9em;

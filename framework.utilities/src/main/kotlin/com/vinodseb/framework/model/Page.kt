@@ -6,16 +6,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Page(
     val title: String,
-    val header: Header? = null,
+    val header: Component? = null,
     val footer: Footer? = null,
     val body: Body? = null
-)
-
-@Serializable
-data class Header(
-    val logo: Component?,
-    val menu: Component?,
-    val search: Component?
 )
 
 @Serializable
@@ -35,4 +28,4 @@ data class Body(
 
 typealias Region = List<Component>
 
-typealias Component = Map<String, @Contextual Any>
+typealias Component = Map<String, String>
