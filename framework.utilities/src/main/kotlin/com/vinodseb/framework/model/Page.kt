@@ -1,15 +1,18 @@
 package com.vinodseb.framework.model
 
 data class Page(
-    val title: String,
-    val header: Component = component(),
-    val banner: Component = component(),
-    val footer: Component = component(),
-    val main: Region = listOf(),
-    val sidebar: Region = listOf()
+    var title: String = "",
+    var header: Component = componentOf(),
+    var banner: Component = componentOf(),
+    var footer: Component = componentOf(),
+    var main: Region = regionOf(),
+    var sidebar: Region = regionOf()
 )
+
+typealias Component = HashMap<String, *>
+
+fun componentOf(vararg pair: Pair<String, Any>) = hashMapOf(*pair)
 
 typealias Region = List<Component>
 
-typealias Component = Map<String, *>
-fun component(vararg pair: Pair<String, Any>) = mapOf(*pair)
+fun regionOf(vararg component: Component) = listOf(*component)
