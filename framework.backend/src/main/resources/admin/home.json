@@ -1,7 +1,6 @@
 {
   "title": "Home Page",
   "header": {
-    "template": "html",
     "content": "<a href=\"/en/admin/home\" class=\"logo\"><strong>Framework</strong> by vinodseb</a>"
   },
   "banner": {
@@ -9,6 +8,9 @@
     "content": "some random <strong>html</strong> to populate banner content",
     "link": "/en/admin/home",
     "image": "/static/images/pic10.jpg"
+  },
+  "footer": {
+    "content": "&copy; Untitled. All rights reserved. Demo Images: <a href=\"https://unsplash.com\">Unsplash</a>. Design: <a href=\"https://html5up.net\">HTML5 UP</a>."
   },
   "main": [],
   "sidebar": []

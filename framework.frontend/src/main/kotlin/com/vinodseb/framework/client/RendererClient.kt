@@ -8,9 +8,9 @@ import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
-import io.ktor.serialization.kotlinx.json.*
+import io.ktor.serialization.gson.*
 import io.ktor.util.logging.*
-import kotlinx.serialization.json.Json
+import java.text.DateFormat
 
 object RendererClient {
 
@@ -18,10 +18,10 @@ object RendererClient {
 
     private val client = HttpClient(CIO) {
         install(ContentNegotiation) {
-            json(Json {
-                prettyPrint = true
-                isLenient = true
-            })
+            gson {
+                setDateFormat(DateFormat.LONG)
+                setPrettyPrinting()
+            }
         }
         install(Logging)
         expectSuccess = true

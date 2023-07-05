@@ -7,9 +7,9 @@ import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
-import io.ktor.serialization.kotlinx.json.*
+import io.ktor.serialization.gson.*
 import io.ktor.util.logging.*
-import kotlinx.serialization.json.Json
+import java.text.DateFormat
 
 object BackendClient {
 
@@ -17,10 +17,10 @@ object BackendClient {
 
     private val client = HttpClient(CIO) {
         install(ContentNegotiation) {
-            json(Json {
-                prettyPrint = true
-                isLenient = true
-            })
+            gson {
+                setDateFormat(DateFormat.LONG)
+                setPrettyPrinting()
+            }
         }
         install(Logging)
         expectSuccess = true

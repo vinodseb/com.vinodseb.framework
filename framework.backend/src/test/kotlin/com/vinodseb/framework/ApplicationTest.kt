@@ -15,7 +15,13 @@ class ApplicationTest {
     fun `test endpoint should return success`() = testApplication {
         client.get("/test").let {
             assertEquals(HttpStatusCode.OK, it.status)
-            assertEquals("{\"title\":\"success\"}", it.bodyAsText())
+            assertEquals("{\n" +
+                    "  \"title\": \"success\",\n" +
+                    "  \"header\": {},\n" +
+                    "  \"banner\": {},\n" +
+                    "  \"main\": [],\n" +
+                    "  \"sidebar\": []\n" +
+                    "}", it.bodyAsText())
         }
     }
 }

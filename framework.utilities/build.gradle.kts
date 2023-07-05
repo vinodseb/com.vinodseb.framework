@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     // Ktor dependencies
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
 
     // Logging dependencies
     implementation("ch.qos.logback:logback-classic:$logback_version")
