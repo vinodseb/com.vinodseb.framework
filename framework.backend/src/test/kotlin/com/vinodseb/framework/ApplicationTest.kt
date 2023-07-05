@@ -19,6 +19,7 @@ class ApplicationTest {
                     "  \"title\": \"success\",\n" +
                     "  \"header\": {},\n" +
                     "  \"banner\": {},\n" +
+                    "  \"footer\": {},\n" +
                     "  \"main\": [],\n" +
                     "  \"sidebar\": []\n" +
                     "}", it.bodyAsText())
