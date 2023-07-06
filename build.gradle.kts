@@ -4,6 +4,7 @@ plugins {
     id("com.github.ben-manes.versions") version versions_version
     id("org.jlleitschuh.gradle.ktlint") version klint_gradle_version
     id("io.gitlab.arturbosch.detekt") version detekt_version
+    id("org.jetbrains.kotlinx.kover") version kover_version
 }
 
 subprojects {
@@ -15,6 +16,7 @@ subprojects {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jlleitschuh.gradle.ktlint")
         plugin("io.gitlab.arturbosch.detekt")
+        plugin("org.jetbrains.kotlinx.kover")
     }
 
     detekt {
