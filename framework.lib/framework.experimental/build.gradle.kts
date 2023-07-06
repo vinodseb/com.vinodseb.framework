@@ -1,7 +1,3 @@
-plugins {
-    `java-library`
-}
-
 dependencies {
     // Ktor dependencies
     implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")

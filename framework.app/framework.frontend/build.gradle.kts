@@ -1,11 +1,4 @@
-plugins {
-    application
-}
-
 dependencies {
-    // Ktor server dependencies
-    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
-
     // Ktor client dependencies
     implementation("io.ktor:ktor-client-core:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
