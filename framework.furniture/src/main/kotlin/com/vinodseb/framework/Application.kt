@@ -1,9 +1,9 @@
 package com.vinodseb.framework
 
-import io.ktor.server.application.*
-import io.ktor.server.netty.*
-import io.ktor.server.routing.*
-import io.ktor.util.logging.*
+import io.ktor.server.application.Application
+import io.ktor.server.netty.EngineMain
+import io.ktor.server.routing.routing
+import io.ktor.util.logging.KtorSimpleLogger
 
 private val Log = KtorSimpleLogger("Application")
 

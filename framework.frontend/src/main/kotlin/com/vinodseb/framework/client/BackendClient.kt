@@ -1,14 +1,14 @@
 package com.vinodseb.framework.client
 
 import com.vinodseb.framework.model.Page
-import io.ktor.client.*
-import io.ktor.client.call.*
-import io.ktor.client.engine.cio.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.client.plugins.logging.*
-import io.ktor.client.request.*
-import io.ktor.serialization.gson.*
-import io.ktor.util.logging.*
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.logging.Logging
+import io.ktor.client.request.get
+import io.ktor.serialization.gson.gson
+import io.ktor.util.logging.KtorSimpleLogger
 import java.text.DateFormat
 
 object BackendClient {
@@ -31,4 +31,3 @@ object BackendClient {
             Log.info("Requested path: $path")
         }
 }
-

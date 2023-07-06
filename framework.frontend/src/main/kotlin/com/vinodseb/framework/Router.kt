@@ -1,12 +1,13 @@
 package com.vinodseb.framework
 
 import com.vinodseb.framework.controller.renderContent
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.http.content.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
-import io.ktor.util.logging.*
+import io.ktor.http.ContentType
+import io.ktor.server.application.call
+import io.ktor.server.http.content.staticResources
+import io.ktor.server.response.respondText
+import io.ktor.server.routing.Route
+import io.ktor.server.routing.get
+import io.ktor.util.logging.KtorSimpleLogger
 
 private val Log = KtorSimpleLogger("Router")
 
@@ -22,7 +23,6 @@ fun Route.testRoute() =
     }
 
 fun Route.pageRoute() = get("/{locale}/{path...}") {
-
     val locale = call.parameters["locale"].orEmpty()
     val path = call.parameters.getAll("path").orEmpty().joinToString("/")
 

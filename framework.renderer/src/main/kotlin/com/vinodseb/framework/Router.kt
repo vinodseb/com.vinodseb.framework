@@ -1,14 +1,17 @@
 package com.vinodseb.framework
 
 import com.vinodseb.framework.model.Page
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.mustache.*
-import io.ktor.server.plugins.swagger.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
-import io.ktor.util.logging.*
+import io.ktor.http.ContentType
+import io.ktor.server.application.call
+import io.ktor.server.mustache.MustacheContent
+import io.ktor.server.plugins.swagger.swaggerUI
+import io.ktor.server.request.receive
+import io.ktor.server.response.respond
+import io.ktor.server.response.respondText
+import io.ktor.server.routing.Route
+import io.ktor.server.routing.get
+import io.ktor.server.routing.post
+import io.ktor.util.logging.KtorSimpleLogger
 
 internal val Logger = KtorSimpleLogger("Routing")
 
