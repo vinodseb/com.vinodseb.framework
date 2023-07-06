@@ -4,6 +4,7 @@ on:
     types: [ opened, reopened, synchronize ]
     paths:
       - 'framework.app/framework.backend/**'
+      - 'buildSrc/**'
 
 jobs:
   Build:
