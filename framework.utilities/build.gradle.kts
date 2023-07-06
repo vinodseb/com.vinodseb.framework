@@ -4,8 +4,6 @@ plugins {
 }
 
 dependencies {
-    // Ktor dependencies
-    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
 }
 
 java {

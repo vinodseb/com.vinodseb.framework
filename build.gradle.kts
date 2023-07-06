@@ -22,6 +22,9 @@ subprojects {
     }
 
     dependencies {
+        // Serialization dependency
+        implementation("io.ktor:ktor-serialization-gson:$ktor_version")
+
         // Logging dependencies
         implementation("ch.qos.logback:logback-classic:$logback_version")
 
@@ -29,4 +32,8 @@ subprojects {
         testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
         testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
     }
+}
+
+repositories {
+    mavenCentral()
 }
