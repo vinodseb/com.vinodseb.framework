@@ -1,12 +1,14 @@
 package com.vinodseb.framework
 
 import com.vinodseb.framework.model.Page
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.http.content.*
-import io.ktor.server.plugins.swagger.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
+import io.ktor.http.CacheControl
+import io.ktor.http.ContentType
+import io.ktor.server.application.call
+import io.ktor.server.http.content.staticResources
+import io.ktor.server.plugins.swagger.swaggerUI
+import io.ktor.server.response.respond
+import io.ktor.server.routing.Route
+import io.ktor.server.routing.get
 
 fun Route.swaggerRoute() =
     swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
@@ -20,13 +22,13 @@ fun Route.pageRoute() = get("/...") {
 }
 
 fun Route.staticRoute() =
-    staticResources("/admin", "admin", index="home.json") {
+    staticResources("/admin", "admin", index = "home.json") {
         extensions("json")
         enableAutoHeadResponse()
-        cacheControl{
+        cacheControl {
             listOf(CacheControl.MaxAge(10000))
         }
-        contentType{
+        contentType {
             ContentType.Application.Json
         }
     }
