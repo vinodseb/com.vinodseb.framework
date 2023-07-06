@@ -10,7 +10,6 @@ private val Log = KtorSimpleLogger("Application")
 fun main(args: Array<String>) = EngineMain.main(args)
 
 fun Application.module() {
-
     Log.info("Running application module")
 
     routing {

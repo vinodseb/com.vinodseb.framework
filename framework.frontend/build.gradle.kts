@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    id("org.jlleitschuh.gradle.ktlint")
     application
 }
 
@@ -9,15 +10,15 @@ repositories {
 
 dependencies {
     // Ktor dependencies
-    implementation("io.ktor:ktor-server-core:${ktor_version}")
-    implementation("io.ktor:ktor-server-netty:${ktor_version}")
-    implementation("io.ktor:ktor-server-content-negotiation:${ktor_version}")
-    implementation("io.ktor:ktor-server-config-yaml:${ktor_version}")
+    implementation("io.ktor:ktor-server-core:$ktor_version")
+    implementation("io.ktor:ktor-server-netty:$ktor_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-server-config-yaml:$ktor_version")
     implementation("io.ktor:ktor-client-core:$ktor_version")
     implementation("io.ktor:ktor-client-cio:$ktor_version")
     implementation("io.ktor:ktor-client-logging:$ktor_version")
-    implementation("io.ktor:ktor-client-content-negotiation:${ktor_version}")
-    implementation("io.ktor:ktor-serialization-gson:${ktor_version}")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
 
     // Logging dependencies
     implementation("ch.qos.logback:logback-classic:$logback_version")
@@ -48,10 +49,10 @@ application {
 task<Exec>("sass") {
     dependsOn("npmInstall")
     workingDir("src/main/resources/static")
-    commandLine( "npm", "run", "sass")
+    commandLine("npm", "run", "sass")
 }
 
 task<Exec>("npmInstall") {
     workingDir("src/main/resources/static")
-    commandLine( "npm", "install")
+    commandLine("npm", "install")
 }

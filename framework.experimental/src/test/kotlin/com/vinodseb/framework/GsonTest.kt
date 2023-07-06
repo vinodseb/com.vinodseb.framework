@@ -10,7 +10,8 @@ import kotlin.test.assertEquals
 class GsonTest {
     @Test
     fun `test jsonToPage()`() =
-        jsonToPage("""
+        jsonToPage(
+            """
             {
                 "title": "Some Random Page",
                 "header": {
@@ -30,7 +31,8 @@ class GsonTest {
                 "sidebar": [
                 ]
             }
-        """).run {
+        """
+        ).run {
             assertEquals("Footer content", this.footer["content"])
         }
 
@@ -38,12 +40,13 @@ class GsonTest {
     fun `test pageToJson()`() =
         pageToJson(
             Page(
-            title = "",
-            footer = componentOf( "content" to "Footer content" )
-        )
+                title = "",
+                footer = componentOf("content" to "Footer content")
+            )
         ).run {
             assertEquals(
                 "{\"title\":\"\",\"header\":{},\"banner\":{},\"footer\":{\"content\":\"Footer content\"},\"main\":[],\"sidebar\":[]}",
-                this)
+                this
+            )
         }
 }

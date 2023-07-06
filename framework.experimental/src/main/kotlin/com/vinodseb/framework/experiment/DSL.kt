@@ -36,5 +36,4 @@ fun main() {
     }.also {
         println(it.title)
     }
-
 }

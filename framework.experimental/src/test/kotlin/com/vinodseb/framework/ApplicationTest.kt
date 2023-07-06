@@ -1,6 +1,3 @@
 package com.vinodseb.framework
 
-class ApplicationTest {
-
-
-}
+class ApplicationTest

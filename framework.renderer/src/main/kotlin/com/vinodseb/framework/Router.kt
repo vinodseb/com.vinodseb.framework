@@ -13,13 +13,13 @@ import io.ktor.util.logging.*
 internal val Logger = KtorSimpleLogger("Routing")
 
 fun Route.pageRoute() =
-        post("/page") {
-            val page = call.receive<Page>()
+    post("/page") {
+        val page = call.receive<Page>()
 
-            Logger.info("Received page $page")
+        Logger.info("Received page $page")
 
-            call.respond(MustacheContent("page.hbs", mapOf("page" to page)))
-        }
+        call.respond(MustacheContent("page.hbs", mapOf("page" to page)))
+    }
 
 fun Route.swaggerRoute() =
     swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
