@@ -32,6 +32,12 @@ subprojects {
         testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
         testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
     }
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
 }
 
 repositories {

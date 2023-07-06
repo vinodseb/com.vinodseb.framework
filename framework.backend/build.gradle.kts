@@ -17,12 +17,6 @@ dependencies {
     implementation(project(":framework.utilities"))
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
-
 application {
     mainClass.set("com.vinodseb.framework.ApplicationKt")
 }
