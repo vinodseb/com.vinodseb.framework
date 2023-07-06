@@ -14,6 +14,6 @@ subprojects {
         testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
 
         // Project dependencies
-        implementation(project(":lib:framework.utilities"))
+        implementation(project(":framework.lib:framework.utilities"))
     }
 }
