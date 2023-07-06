@@ -16,7 +16,7 @@ fun Route.swaggerRoute() =
     swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
 
 fun Route.testRoute() = get("/test") {
-    call.respond(Page("success"))
+    call.respond(Page(title = "success"))
 }
 
 fun Route.pageRoute() = get("/...") {
