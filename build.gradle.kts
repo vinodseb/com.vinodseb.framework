@@ -3,10 +3,20 @@ plugins {
     kotlin("plugin.serialization") version kotlin_version
     id("com.github.ben-manes.versions") version versions_version
     id("org.jlleitschuh.gradle.ktlint") version klint_version
+    id("io.gitlab.arturbosch.detekt") version "1.23.0"
 }
 
 allprojects {
     repositories {
         mavenCentral()
+    }
+
+    apply {
+        plugin("org.jlleitschuh.gradle.ktlint")
+        plugin("io.gitlab.arturbosch.detekt")
+    }
+
+    detekt {
+        config.setFrom("config/detekt/detekt.yml")
     }
 }

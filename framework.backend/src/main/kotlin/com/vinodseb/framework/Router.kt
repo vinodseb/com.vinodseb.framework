@@ -10,6 +10,8 @@ import io.ktor.server.response.respond
 import io.ktor.server.routing.Route
 import io.ktor.server.routing.get
 
+const val CACHE_CONTROL_MAX_AGE = 10000
+
 fun Route.swaggerRoute() =
     swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
 
@@ -26,7 +28,7 @@ fun Route.staticRoute() =
         extensions("json")
         enableAutoHeadResponse()
         cacheControl {
-            listOf(CacheControl.MaxAge(10000))
+            listOf(CacheControl.MaxAge(CACHE_CONTROL_MAX_AGE))
         }
         contentType {
             ContentType.Application.Json
