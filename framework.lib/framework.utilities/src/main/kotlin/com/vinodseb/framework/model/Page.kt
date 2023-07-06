@@ -1,6 +1,7 @@
 package com.vinodseb.framework.model
 
 data class Page(
+    var lang: String = "en",
     var title: String = "",
     var header: Component = componentOf(),
     var banner: Component = componentOf(),

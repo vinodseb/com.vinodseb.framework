@@ -4,6 +4,10 @@ on:
     types: [ opened, reopened, synchronize ]
     paths:
       - 'framework.app/framework.furniture/**'
+      - 'framework.app/build.gradle.kts'
+      - 'build.gradle.kts'
+      - 'framework.lib/framework.utilities/**'
+      - 'framework.lib/build.gradle.kts'
       - 'buildSrc/**'
 
 jobs:
