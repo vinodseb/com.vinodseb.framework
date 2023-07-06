@@ -1,9 +1,9 @@
-name: Framework Backend
+name: Framework Frontend
 on:
   pull_request:
     types: [ opened, reopened, synchronize ]
     paths:
-      - 'framework.app/framework.backend/**'
+      - 'framework.app/framework.frontend/**'
 
 jobs:
   Build:
@@ -25,4 +25,4 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
         with:
-          arguments: :framework.app:framework.backend:build
+          arguments: :framework.app:framework.frontend:build
