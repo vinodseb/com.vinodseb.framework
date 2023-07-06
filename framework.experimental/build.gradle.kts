@@ -4,10 +4,6 @@ plugins {
     application
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     // Ktor dependencies
     implementation("io.ktor:ktor-serialization-gson:$ktor_version")

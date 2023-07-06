@@ -4,10 +4,6 @@ plugins {
     application
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     // Ktor dependencies
     implementation("io.ktor:ktor-server-core:$ktor_version")
