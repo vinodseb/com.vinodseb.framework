@@ -17,7 +17,7 @@ dependencies {
     testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
 
     // Project dependencies
-    implementation(project(":framework.utilities"))
+    implementation(project(":lib:framework.utilities"))
 
     // install required npm packages from gradle
     // implementation(npm("node-sass", ">=6.0"))
