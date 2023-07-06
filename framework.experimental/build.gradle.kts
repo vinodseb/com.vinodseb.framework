@@ -1,5 +1,5 @@
 plugins {
-    application
+    `java-library`
 }
 
 dependencies {
@@ -8,8 +8,4 @@ dependencies {
 
     // Project dependencies
     implementation(project(":framework.utilities"))
-}
-
-application {
-    mainClass.set("com.vinodseb.framework.ApplicationKt")
 }
