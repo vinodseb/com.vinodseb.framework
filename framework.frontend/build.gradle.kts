@@ -1,5 +1,4 @@
 plugins {
-    kotlin("jvm")
     application
 }
 
@@ -15,13 +14,8 @@ dependencies {
     implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
     implementation("io.ktor:ktor-serialization-gson:$ktor_version")
 
-    // Logging dependencies
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-
     // Test dependencies
     testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
     // Project dependencies
     implementation(project(":framework.utilities"))

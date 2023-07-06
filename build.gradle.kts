@@ -6,17 +6,27 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version detekt_version
 }
 
-allprojects {
+subprojects {
     repositories {
         mavenCentral()
     }
 
     apply {
+        plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jlleitschuh.gradle.ktlint")
         plugin("io.gitlab.arturbosch.detekt")
     }
 
     detekt {
         config.setFrom("config/detekt/detekt.yml")
+    }
+
+    dependencies {
+        // Logging dependencies
+        implementation("ch.qos.logback:logback-classic:$logback_version")
+
+        // Test dependencies
+        testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+        testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
     }
 }
