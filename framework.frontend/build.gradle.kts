@@ -20,8 +20,8 @@ dependencies {
     // Project dependencies
     implementation(project(":framework.utilities"))
 
-    //
-    implementation(npm("node-sass", ">=6.0"))
+    // install required npm packages from gradle
+    // implementation(npm("node-sass", ">=6.0"))
 }
 
 java {
