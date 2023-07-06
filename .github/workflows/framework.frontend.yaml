@@ -2,7 +2,7 @@ name: Framework Backend
 on:
   push:
     paths:
-      - 'framework.app/framework.frontend/**'
+      - 'framework.app/framework.backend/**'
 
 jobs:
   Build:
