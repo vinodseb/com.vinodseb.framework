@@ -1,8 +1,4 @@
 subprojects {
-    repositories {
-        mavenCentral()
-    }
-
     apply {
         plugin("application")
     }
