@@ -12,6 +12,7 @@ dependencies {
 application {
     mainClass.set("com.vinodseb.framework.ApplicationKt")
     project.tasks["build"].dependsOn("sass")
+    project.tasks["clean"].dependsOn("npmClean")
 }
 
 task<Exec>("sass") {
@@ -23,4 +24,10 @@ task<Exec>("sass") {
 task<Exec>("npmInstall") {
     workingDir("src/main/resources/static")
     commandLine("npm", "install")
+}
+
+task<Exec>("npmClean") {
+    dependsOn("npmInstall")
+    workingDir("src/main/resources/static")
+    commandLine("npm", "run", "clean")
 }
