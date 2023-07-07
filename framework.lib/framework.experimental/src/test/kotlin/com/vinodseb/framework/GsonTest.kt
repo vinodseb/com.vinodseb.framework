@@ -46,7 +46,7 @@ class GsonTest {
         ).run {
             assertEquals(
                 "{\"lang\":\"en\",\"title\":\"\",\"header\":{},\"banner\":{}," +
-                        "\"footer\":{\"content\":\"Footer content\"},\"main\":[],\"sidebar\":[]}",
+                    "\"footer\":{\"content\":\"Footer content\"},\"main\":[],\"sidebar\":[]}",
                 this
             )
         }
