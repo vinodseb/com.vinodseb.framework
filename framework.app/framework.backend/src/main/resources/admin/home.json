@@ -1,4 +1,5 @@
 {
+  "lang": "zxx",
   "title": "Home Page",
   "header": {
     "content": "<a href=\"/en/admin/home\" class=\"logo\"><strong>Framework</strong> by vinodseb</a>"

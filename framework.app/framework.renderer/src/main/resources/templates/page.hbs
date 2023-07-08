@@ -4,7 +4,7 @@
 <head>
     <title>{{page.title}}</title>
     <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel="stylesheet" href="/static/assets/css/main.css" >
 </head>
 <body class="is-preload">
@@ -26,17 +26,8 @@
                 {{> banner }}
             {{/page.banner}}
 
-            <!-- Section -->
-            {{> main/features }}
-
-            <!-- Section -->
-            {{> main/posts }}
-
-            <!-- Section -->
-            {{> main/content }}
-
-            <!-- Section -->
-            {{> main/posts }}
+            <!-- Main Region -->
+            {{> main }}
 
             <!-- Footer -->
             {{#page.footer}}
@@ -46,7 +37,7 @@
         </div>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar Region -->
     {{> sidebar }}
 
 </div>
