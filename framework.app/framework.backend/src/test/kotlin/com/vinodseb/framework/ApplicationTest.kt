@@ -14,7 +14,7 @@ class ApplicationTest {
             assertEquals(HttpStatusCode.OK, it.status)
             assertEquals(
                 "{\n" +
-                    "  \"lang\": \"en\",\n" +
+                    "  \"lang\": \"zxx\",\n" +
                     "  \"title\": \"success\",\n" +
                     "  \"header\": {},\n" +
                     "  \"banner\": {},\n" +
