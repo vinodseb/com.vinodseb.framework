@@ -3,7 +3,7 @@ tasks.register("npmClean") {
         exec {
             workingDir("src/main/resources/static")
             executable("npm")
-            args("install")
+            args("ci")
         }
     }
     doLast {
@@ -20,7 +20,7 @@ tasks.register("sass") {
         exec {
             workingDir("src/main/resources/static")
             executable("npm")
-            args("install")
+            args("ci")
         }
     }
     doLast {
