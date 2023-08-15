@@ -1,54 +1,89 @@
 {{! Main Region }}
-<!-- Section -->
-{{> main/features }}
 
-<!-- Section -->
-{{> main/posts }}
+{{#page.main}}
+    <!-- Features Section -->
+    {{#features}}
+        {{> main/features }}
+    {{/features}}
 
-<!-- Section -->
-{{> main/content }}
+    <!-- Posts Section -->
+    {{#posts}}
+        {{> main/posts }}
+    {{/posts}}
 
-<!-- Section -->
-{{> main/posts }}
+    <!-- Content Section -->
+    {{#content}}
+        {{> main/content }}
+    {{/content}}
 
-<!-- Section -->
-{{> main/table }}
+    <!-- Table Section -->
+    {{#table}}
+        {{> main/table }}
+    {{/table}}
 
-<!-- Section -->
-{{> main/table-grid }}
+    <!-- Table Grid Section -->
+    {{#table-grid}}
+        {{> main/table-grid }}
+    {{/table-grid}}
 
-<!-- Section -->
-{{> main/pagination }}
+    <!-- Pagination Section -->
+    {{#pagination}}
+        {{> main/pagination }}
+    {{/pagination}}
 
-<!-- Section -->
-{{> main/block-quote }}
+    <!-- Block Quote Section -->
+    {{#block-quote}}
+        {{> main/block-quote }}
+    {{/block-quote}}
 
-<!-- Section -->
-{{> main/box }}
+    <!-- Box Section -->
+    {{#box}}
+        {{> main/box }}
+    {{/box}}
 
-<!-- Section -->
-{{> main/code-block }}
+    <!-- Code Block Section -->
+    {{#code-block}}
+        {{> main/code-block }}
+    {{/code-block}}
 
-<!-- Section -->
-{{> main/content-image-left }}
+    <!-- Content Image Left Section -->
+    {{#content-image-left}}
+        {{> main/content-image-left }}
+    {{/content-image-left}}
 
-<!-- Section -->
-{{> main/content-image-right }}
+    <!-- Content Image Right Section -->
+    {{#content-image-right}}
+        {{> main/content-image-right }}
+    {{/content-image-right}}
 
-<!-- Section -->
-{{> main/image-grid }}
+    <!-- Image Grid Section -->
+    {{#image-grid}}
+        {{> main/image-grid }}
+    {{/image-grid}}
 
-<!-- Section -->
-{{> main/form }}
+    <!-- Form Section -->
+    {{#form}}
+        {{> main/form }}
+    {{/form}}
 
-<!-- Section -->
-{{> main/list }}
+    <!-- List Section -->
+    {{#list}}
+        {{> main/list }}
+    {{/list}}
 
-<!-- Section -->
-{{> main/button }}
+    <!-- Button Section -->
+    {{#button}}
+        {{> main/button }}
+    {{/button}}
 
-<!-- Section -->
-{{> main/layout-2c }}
+    <!-- Layout 2C Section -->
+    {{#layout-2c}}
+        {{> main/layout-2c }}
+    {{/layout-2c}}
 
-<!-- Section -->
-{{> main/layout-3c }}
+    <!-- Layout 3C Section -->
+    {{#layout-3c}}
+        {{> main/layout-3c }}
+    {{/layout-3c}}
+
+{{/page.main}}
