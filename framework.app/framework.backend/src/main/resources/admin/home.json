@@ -30,5 +30,18 @@
       "content": true
     }
   ],
-  "sidebar": []
+  "sidebar": [
+    {
+      "search": true
+    },
+    {
+      "menu": true
+    },
+    {
+      "mini-posts": true
+    },
+    {
+      "contact": true
+    }
+  ]
 }
