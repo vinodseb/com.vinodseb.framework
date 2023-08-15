@@ -1,29 +1,19 @@
 {{! Sidebar Region }}
-
 <div id="sidebar">
     <div class="inner">
         {{#page.sidebar}}
-
-            <!-- Search Section -->
-            {{#search}}
+            {{#search}} {{! Search Section }}
                 {{> sidebar/search }}
             {{/search}}
-
-            <!-- Menu Section -->
-            {{#menu}}
+            {{#menu}} {{! Menu Section }}
                 {{> sidebar/menu }}
             {{/menu}}
-
-            <!-- Mini Posts Section -->
-            {{#mini-posts}}
+            {{#mini-posts}} {{! Mini Posts Section }}
                 {{> sidebar/mini-posts }}
             {{/mini-posts}}
-
-            <!-- Contact Section -->
-            {{#contact}}
+            {{#contact}} {{! Contact Section }}
                 {{> sidebar/contact }}
             {{/contact}}
-
         {{/page.sidebar}}
     </div>
 </div>
