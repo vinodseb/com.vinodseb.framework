@@ -2,18 +2,18 @@
 <div id="sidebar">
     <div class="inner">
         {{#page.sidebar}}
-            {{#search}} {{! Search Section }}
-                {{> sidebar/search }}
-            {{/search}}
-            {{#menu}} {{! Menu Section }}
-                {{> sidebar/menu }}
-            {{/menu}}
-            {{#mini-posts}} {{! Mini Posts Section }}
-                {{> sidebar/mini-posts }}
-            {{/mini-posts}}
-            {{#contact}} {{! Contact Section }}
-                {{> sidebar/contact }}
-            {{/contact}}
+            {{#tmpl-search}} {{! Search Section }}
+                {{> sidebar/tmpl-search }}
+            {{/tmpl-search}}
+            {{#tmpl-menu}} {{! Menu Section }}
+                {{> sidebar/tmpl-menu }}
+            {{/tmpl-menu}}
+            {{#tmpl-mini-posts}} {{! Mini Posts Section }}
+                {{> sidebar/tmpl-mini-posts }}
+            {{/tmpl-mini-posts}}
+            {{#tmpl-contact}} {{! Contact Section }}
+                {{> sidebar/tmpl-contact }}
+            {{/tmpl-contact}}
         {{/page.sidebar}}
     </div>
 </div>

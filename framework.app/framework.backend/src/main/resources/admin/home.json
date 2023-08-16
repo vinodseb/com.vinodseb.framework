@@ -15,36 +15,36 @@
   },
   "main": [
     {
-      "features": true
+      "tmpl-features": true
     },
     {
-      "content": true
+      "tmpl-content": true
     },
     {
-      "table": true
+      "tmpl-table": true
     },
     {
-      "form": true
+      "tmpl-form": true
     },
     {
-      "content": true
+      "tmpl-content": true
     },
     {
-      "post": true
+      "tmpl-post": true
     }
   ],
   "sidebar": [
     {
-      "search": true
+      "tmpl-search": true
     },
     {
-      "menu": true
+      "tmpl-menu": true
     },
     {
-      "mini-posts": true
+      "tmpl-mini-posts": true
     },
     {
-      "contact": true
+      "tmpl-contact": true
     }
   ]
 }
