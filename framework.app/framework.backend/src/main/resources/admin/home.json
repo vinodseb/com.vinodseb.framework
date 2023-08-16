@@ -28,6 +28,9 @@
     },
     {
       "content": true
+    },
+    {
+      "post": true
     }
   ],
   "sidebar": [
