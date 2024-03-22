@@ -7,7 +7,7 @@ data class Page(
     var banner: Component = componentOf(),
     var footer: Component = componentOf(),
     var main: Region = regionOf(),
-    var sidebar: Region = regionOf()
+    var sidebar: Region = regionOf(),
 )
 
 typealias Component = HashMap<String, *>

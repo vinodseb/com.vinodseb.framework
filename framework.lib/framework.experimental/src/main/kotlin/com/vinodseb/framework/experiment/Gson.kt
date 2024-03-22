@@ -5,13 +5,6 @@ import com.vinodseb.framework.model.Page
 
 val gson = Gson()
 
-// val type: Type = object : TypeToken<Map<String, *>>() {}.type
+fun jsonToPage(string: String): Page = gson.fromJson(string, Page::class.java)
 
-// fun Component.property(name: String): String =
-//    get(name) as String
-
-fun jsonToPage(string: String): Page =
-    gson.fromJson(string, Page::class.java)
-
-fun pageToJson(page: Page) =
-    gson.toJson(page)
+fun pageToJson(page: Page): String = gson.toJson(page)

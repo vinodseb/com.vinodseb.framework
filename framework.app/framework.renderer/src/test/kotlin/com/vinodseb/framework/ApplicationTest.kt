@@ -8,12 +8,12 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class ApplicationTest {
-
     @Test
-    fun `test endpoint should return success`() = testApplication {
-        client.get("/test").let {
-            assertEquals(HttpStatusCode.OK, it.status)
-            assertEquals("<div>furniture</div>", it.bodyAsText())
+    fun `test endpoint should return success`() =
+        testApplication {
+            client.get("/test").let {
+                assertEquals(HttpStatusCode.OK, it.status)
+                assertEquals("<div>furniture</div>", it.bodyAsText())
+            }
         }
-    }
 }

@@ -31,7 +31,7 @@ class GsonTest {
                 "sidebar": [
                 ]
             }
-        """
+        """,
         ).run {
             assertEquals("Footer content", this.footer["content"])
         }
@@ -41,13 +41,13 @@ class GsonTest {
         pageToJson(
             Page(
                 title = "",
-                footer = componentOf("content" to "Footer content")
-            )
+                footer = componentOf("content" to "Footer content"),
+            ),
         ).run {
             assertEquals(
                 "{\"lang\":\"zxx\",\"title\":\"\",\"header\":{},\"banner\":{}," +
                     "\"footer\":{\"content\":\"Footer content\"},\"main\":[],\"sidebar\":[]}",
-                this
+                this,
             )
         }
 }

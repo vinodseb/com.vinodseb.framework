@@ -15,19 +15,19 @@ import io.ktor.util.logging.KtorSimpleLogger
 import java.text.DateFormat
 
 object RendererClient {
-
     private val Log = KtorSimpleLogger("RendererClient")
 
-    private val client = HttpClient(CIO) {
-        install(ContentNegotiation) {
-            gson {
-                setDateFormat(DateFormat.LONG)
-                setPrettyPrinting()
+    private val client =
+        HttpClient(CIO) {
+            install(ContentNegotiation) {
+                gson {
+                    setDateFormat(DateFormat.LONG)
+                    setPrettyPrinting()
+                }
             }
+            install(Logging)
+            expectSuccess = true
         }
-        install(Logging)
-        expectSuccess = true
-    }
 
     suspend fun post(page: Page) =
         client.post("http://localhost:8082/page") {

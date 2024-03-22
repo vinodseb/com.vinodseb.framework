@@ -24,9 +24,9 @@ fun Route.pageRoute() =
         call.respond(MustacheContent("page.hbs", mapOf("page" to page)))
     }
 
-fun Route.swaggerRoute() =
-    swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
+fun Route.swaggerRoute() = swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
 
-fun Route.testRoute() = get("/test") {
-    call.respondText("<div>furniture</div>", ContentType.Text.Html)
-}
+fun Route.testRoute() =
+    get("/test") {
+        call.respondText("<div>furniture</div>", ContentType.Text.Html)
+    }

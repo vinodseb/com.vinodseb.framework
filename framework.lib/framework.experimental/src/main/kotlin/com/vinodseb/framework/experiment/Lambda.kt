@@ -8,7 +8,7 @@ fun main() {
 
 data class Page1(
     val title: String = "",
-    val heading: String = ""
+    val heading: String = "",
 )
 
 val newPage: (String, String) -> Page1 = {

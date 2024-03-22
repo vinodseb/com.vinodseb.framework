@@ -11,36 +11,35 @@ import io.ktor.util.logging.KtorSimpleLogger
 
 private val Log = KtorSimpleLogger("Router")
 
-fun Route.faviconRoute() =
-    staticResources("/favicon.ico", "static", "/images/favicon.svg")
+fun Route.faviconRoute() = staticResources("/favicon.ico", "static", "/images/favicon.svg")
 
-fun Route.staticRoute() =
-    staticResources("/static", "static")
+fun Route.staticRoute() = staticResources("/static", "static")
 
 fun Route.testRoute() =
     get("/test") {
         call.respondText("<html><body>success</body></html>", ContentType.Text.Html)
     }
 
-fun Route.pageRoute() = get("/{locale}/{path...}") {
-    val locale = call.parameters["locale"].orEmpty()
-    val path = call.parameters.getAll("path").orEmpty().joinToString("/")
+fun Route.pageRoute() =
+    get("/{locale}/{path...}") {
+        val locale = call.parameters["locale"].orEmpty()
+        val path = call.parameters.getAll("path").orEmpty().joinToString("/")
 
-    Log.info("Locale: $locale")
-    Log.info("Path: $path")
+        Log.info("Locale: $locale")
+        Log.info("Path: $path")
 
-    when {
-        isUnsupportedLocale(locale) -> call.respondText("Unsupported locale")
-        else -> renderContent(path).fold(
-            onSuccess = {
-                call.respondText(it, ContentType.Text.Html)
-            },
-            onFailure = {
-                call.respondText(it.message.toString())
-            }
-        )
+        when {
+            isUnsupportedLocale(locale) -> call.respondText("Unsupported locale")
+            else ->
+                renderContent(path).fold(
+                    onSuccess = {
+                        call.respondText(it, ContentType.Text.Html)
+                    },
+                    onFailure = {
+                        call.respondText(it.message.toString())
+                    },
+                )
+        }
     }
-}
 
-private fun isUnsupportedLocale(locale: String): Boolean =
-    !"(en)|(de)".toRegex().containsMatchIn(locale)
+private fun isUnsupportedLocale(locale: String): Boolean = !"(en)|(de)".toRegex().containsMatchIn(locale)

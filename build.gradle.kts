@@ -15,7 +15,6 @@ subprojects {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jlleitschuh.gradle.ktlint")
         plugin("io.gitlab.arturbosch.detekt")
-        plugin("org.jetbrains.kotlinx.kover")
     }
 
     detekt {

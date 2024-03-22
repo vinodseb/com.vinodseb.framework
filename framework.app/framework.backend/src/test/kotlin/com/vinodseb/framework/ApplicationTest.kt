@@ -9,21 +9,22 @@ import kotlin.test.assertEquals
 
 class ApplicationTest {
     @Test
-    fun `test endpoint should return success`() = testApplication {
-        client.get("/test").let {
-            assertEquals(HttpStatusCode.OK, it.status)
-            assertEquals(
-                "{\n" +
-                    "  \"lang\": \"zxx\",\n" +
-                    "  \"title\": \"success\",\n" +
-                    "  \"header\": {},\n" +
-                    "  \"banner\": {},\n" +
-                    "  \"footer\": {},\n" +
-                    "  \"main\": [],\n" +
-                    "  \"sidebar\": []\n" +
-                    "}",
-                it.bodyAsText()
-            )
+    fun `test endpoint should return success`() =
+        testApplication {
+            client.get("/test").let {
+                assertEquals(HttpStatusCode.OK, it.status)
+                assertEquals(
+                    "{\n" +
+                        "  \"lang\": \"zxx\",\n" +
+                        "  \"title\": \"success\",\n" +
+                        "  \"header\": {},\n" +
+                        "  \"banner\": {},\n" +
+                        "  \"footer\": {},\n" +
+                        "  \"main\": [],\n" +
+                        "  \"sidebar\": []\n" +
+                        "}",
+                    it.bodyAsText(),
+                )
+            }
         }
-    }
 }

@@ -12,19 +12,19 @@ import io.ktor.util.logging.KtorSimpleLogger
 import java.text.DateFormat
 
 object BackendClient {
-
     private val Log = KtorSimpleLogger("BackendClient")
 
-    private val client = HttpClient(CIO) {
-        install(ContentNegotiation) {
-            gson {
-                setDateFormat(DateFormat.LONG)
-                setPrettyPrinting()
+    private val client =
+        HttpClient(CIO) {
+            install(ContentNegotiation) {
+                gson {
+                    setDateFormat(DateFormat.LONG)
+                    setPrettyPrinting()
+                }
             }
+            install(Logging)
+            expectSuccess = true
         }
-        install(Logging)
-        expectSuccess = true
-    }
 
     suspend fun get(path: String): Page =
         client.get("http://localhost:8081/$path").body<Page>().also {
