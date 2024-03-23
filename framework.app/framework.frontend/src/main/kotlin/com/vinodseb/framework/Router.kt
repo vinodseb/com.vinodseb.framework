@@ -1,8 +1,9 @@
 package com.vinodseb.framework
 
+import com.vinodseb.framework.client.BackendClient
+import com.vinodseb.framework.client.RendererClient
 import com.vinodseb.framework.controller.renderContent
 import io.ktor.http.ContentType
-import io.ktor.server.application.call
 import io.ktor.server.http.content.staticResources
 import io.ktor.server.response.respondText
 import io.ktor.server.routing.Route
@@ -20,26 +21,28 @@ fun Route.testRoute() =
         call.respondText("<html><body>success</body></html>", ContentType.Text.Html)
     }
 
-fun Route.pageRoute() =
-    get("/{locale}/{path...}") {
-        val locale = call.parameters["locale"].orEmpty()
-        val path = call.parameters.getAll("path").orEmpty().joinToString("/")
+fun Route.pageRoute(
+    backendClient: BackendClient,
+    rendererClient: RendererClient,
+) = get("/{locale}/{path...}") {
+    val locale = call.parameters["locale"].orEmpty()
+    val path = call.parameters.getAll("path").orEmpty().joinToString("/")
 
-        Log.info("Locale: $locale")
-        Log.info("Path: $path")
+    Log.info("Locale: $locale")
+    Log.info("Path: $path")
 
-        when {
-            isUnsupportedLocale(locale) -> call.respondText("Unsupported locale")
-            else ->
-                renderContent(path).fold(
-                    onSuccess = {
-                        call.respondText(it, ContentType.Text.Html)
-                    },
-                    onFailure = {
-                        call.respondText(it.message.toString())
-                    },
-                )
-        }
+    when {
+        locale.isUnsupported() -> call.respondText("Unsupported locale")
+        else ->
+            renderContent(path, backendClient, rendererClient).fold(
+                onSuccess = {
+                    call.respondText(it, ContentType.Text.Html)
+                },
+                onFailure = {
+                    call.respondText(it.message.toString())
+                },
+            )
     }
+}
 
-private fun isUnsupportedLocale(locale: String): Boolean = !"(en)|(de)".toRegex().containsMatchIn(locale)
+private fun String.isUnsupported(): Boolean = listOf("en", "de").none { it == this }

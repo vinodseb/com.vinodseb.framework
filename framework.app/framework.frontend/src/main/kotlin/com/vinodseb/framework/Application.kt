@@ -1,5 +1,9 @@
 package com.vinodseb.framework
 
+import com.vinodseb.framework.client.BackendClient
+import com.vinodseb.framework.client.RendererClient
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.engine.cio.CIO
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.netty.EngineMain
@@ -11,6 +15,8 @@ private val Log = KtorSimpleLogger("Application")
 
 fun main(args: Array<String>) = EngineMain.main(args)
 
+val httpClientEngine: HttpClientEngine = CIO.create()
+
 fun Application.module() {
     Log.info("Running application module")
 
@@ -20,6 +26,9 @@ fun Application.module() {
         faviconRoute()
         staticRoute()
         testRoute()
-        pageRoute()
+        pageRoute(
+            BackendClient(httpClientEngine),
+            RendererClient(httpClientEngine),
+        )
     }
 }
