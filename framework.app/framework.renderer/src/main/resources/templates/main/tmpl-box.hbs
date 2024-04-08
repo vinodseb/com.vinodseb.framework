@@ -1,5 +1,7 @@
 {{! Box Component }}
-<h3>Box</h3>
+<h3>{{ title }}</h3>
 <div class="box">
-    <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>
+    {{#content}}
+        {{> ../tmpl-html }}
+    {{/content}}
 </div>
