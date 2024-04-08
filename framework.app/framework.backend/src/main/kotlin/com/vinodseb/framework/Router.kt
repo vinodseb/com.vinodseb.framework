@@ -24,7 +24,7 @@ fun Route.pageRoute() =
     }
 
 fun Route.staticRoute() =
-    staticResources("/admin", "admin", index = "home.json") {
+    staticResources("/en/admin", "en/admin", index = "home.json") {
         extensions("json")
         enableAutoHeadResponse()
         cacheControl {

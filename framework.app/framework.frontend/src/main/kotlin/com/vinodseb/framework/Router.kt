@@ -34,7 +34,7 @@ fun Route.pageRoute(
     when {
         locale.isUnsupported() -> call.respondText("Unsupported locale")
         else ->
-            renderContent(path, backendClient, rendererClient).fold(
+            renderContent("$locale/$path", backendClient, rendererClient).fold(
                 onSuccess = {
                     call.respondText(it, ContentType.Text.Html)
                 },
