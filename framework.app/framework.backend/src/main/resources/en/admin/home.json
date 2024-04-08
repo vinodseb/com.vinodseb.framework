@@ -43,7 +43,60 @@
       "content": "<p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>"
     },
     {
-      "tmpl-actions": true
+      "tmpl-actions": true,
+      "title": "Actions",
+      "stacked": true,
+      "buttons": [
+        {
+          "primary": true,
+          "small": true,
+          "fit": true,
+          "text": "Button",
+          "href": "https://www.google.com"
+        },
+        {
+          "primary": false,
+          "small": false,
+          "fit": false,
+          "text": "Button",
+          "href": "https://www.google.com"
+        },
+        {
+          "primary": false,
+          "small": false,
+          "fit": false,
+          "text": "Button",
+          "href": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "tmpl-actions": true,
+      "title": "Actions",
+      "stacked": false,
+      "buttons": [
+        {
+          "primary": true,
+          "small": true,
+          "fit": true,
+          "text": "Button",
+          "href": "https://www.google.com"
+        },
+        {
+          "primary": false,
+          "small": false,
+          "fit": false,
+          "text": "Button",
+          "href": "https://www.google.com"
+        },
+        {
+          "primary": false,
+          "small": false,
+          "fit": false,
+          "text": "Button",
+          "href": "https://www.google.com"
+        }
+      ]
     }
   ],
   "sidebar": [
