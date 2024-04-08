@@ -31,6 +31,11 @@
     },
     {
       "tmpl-post": true
+    },
+    {
+      "tmpl-block-quote": true,
+      "title": "Blockquote",
+      "content": "Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis\n        iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem\n        ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac\n        adipiscing accumsan eu faucibus."
     }
   ],
   "sidebar": [
