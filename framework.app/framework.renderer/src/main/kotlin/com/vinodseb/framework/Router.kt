@@ -2,7 +2,6 @@ package com.vinodseb.framework
 
 import com.vinodseb.framework.model.Page
 import io.ktor.http.ContentType
-import io.ktor.server.application.call
 import io.ktor.server.mustache.MustacheContent
 import io.ktor.server.plugins.swagger.swaggerUI
 import io.ktor.server.request.receive
@@ -21,7 +20,7 @@ fun Route.pageRoute() =
 
         Logger.info("Received page $page")
 
-        call.respond(MustacheContent("page.hbs", mapOf("page" to page)))
+        call.respond(MustacheContent("tmpl-page.hbs", mapOf("page" to page)))
     }
 
 fun Route.swaggerRoute() = swaggerUI(path = "/swagger", swaggerFile = "openapi/documentation.yaml")
