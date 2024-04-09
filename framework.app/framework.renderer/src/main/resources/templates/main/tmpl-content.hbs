@@ -1,9 +1,17 @@
 {{! Content Component }}
 <section>
     <header class="major">
-        <h2>Ipsum sed dolor</h2>
+        <h2>{{title}}</h2>
     </header>
-    {{> tmpl-content-single }}
-    {{> tmpl-content-double }}
-    {{> tmpl-content-triple }}
+    {{#rows}}
+        {{#single-column}}
+            {{> tmpl-content-single }}
+        {{/single-column}}
+        {{#double-column}}
+            {{> tmpl-content-double }}
+        {{/double-column}}
+        {{#triple-column}}
+            {{> tmpl-content-triple }}
+        {{/triple-column}}
+    {{/rows}}
 </section>
