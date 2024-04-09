@@ -97,6 +97,11 @@
           "href": "https://www.google.com"
         }
       ]
+    },
+    {
+      "tmpl-code-block": true,
+      "title": "Code Block",
+      "content": "i = 0;\n\nwhile (!deck.isInOrder()) {\n    print 'Iteration ' + i;\n    deck.shuffle();\n    i++;\n}\n\nprint 'It took ' + i + ' iterations to sort the deck.';"
     }
   ],
   "sidebar": [
