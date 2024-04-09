@@ -27,9 +27,6 @@
       "tmpl-form": true
     },
     {
-      "tmpl-content": true
-    },
-    {
       "tmpl-post": true
     },
     {
@@ -55,16 +52,6 @@
           "href": "https://www.google.com"
         },
         {
-          "primary": false,
-          "small": false,
-          "fit": false,
-          "text": "Button",
-          "href": "https://www.google.com"
-        },
-        {
-          "primary": false,
-          "small": false,
-          "fit": false,
           "text": "Button",
           "href": "https://www.google.com"
         }
@@ -73,7 +60,6 @@
     {
       "tmpl-actions": true,
       "title": "Actions",
-      "stacked": false,
       "buttons": [
         {
           "primary": true,
@@ -83,16 +69,6 @@
           "href": "https://www.google.com"
         },
         {
-          "primary": false,
-          "small": false,
-          "fit": false,
-          "text": "Button",
-          "href": "https://www.google.com"
-        },
-        {
-          "primary": false,
-          "small": false,
-          "fit": false,
           "text": "Button",
           "href": "https://www.google.com"
         }
