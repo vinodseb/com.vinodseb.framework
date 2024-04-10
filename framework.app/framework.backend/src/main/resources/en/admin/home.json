@@ -135,6 +135,26 @@
       "tmpl-code-block": true,
       "title": "Code Block",
       "content": "i = 0;\n\nwhile (!deck.isInOrder()) {\n    print 'Iteration ' + i;\n    deck.shuffle();\n    i++;\n}\n\nprint 'It took ' + i + ' iterations to sort the deck.';"
+    },
+    {
+      "tmpl-content-image": true,
+      "title": "Blockquote",
+      "content": "Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis\n        iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem\n        ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac\n        adipiscing accumsan eu faucibus.",
+      "image": {
+        "align": "left",
+        "src": "/static/images/pic01.jpg",
+        "alt": "pic01"
+      }
+    },
+    {
+      "tmpl-content-image": true,
+      "title": "Blockquote",
+      "content": "<div>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis\n        iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem\n        ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac\n        adipiscing accumsan eu faucibus.</div>",
+      "image": {
+        "align": "right",
+        "src": "/static/images/pic01.jpg",
+        "alt": "pic01"
+      }
     }
   ],
   "sidebar": [
