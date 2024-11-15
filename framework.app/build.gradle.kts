@@ -12,6 +12,7 @@ subprojects {
 
         // Test dependencies
         testImplementation("io.ktor:ktor-server-test-host:$ktor_version")
+        testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
 
         // Project dependencies
         implementation(project(":framework.lib:framework.core"))

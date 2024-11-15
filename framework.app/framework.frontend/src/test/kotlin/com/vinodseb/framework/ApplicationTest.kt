@@ -9,8 +9,11 @@ import kotlin.test.assertEquals
 
 class ApplicationTest {
     @Test
-    fun `test endpoint should return success`() =
+    fun testRoot() =
         testApplication {
+            application {
+                module()
+            }
             client.get("/test").let {
                 assertEquals(HttpStatusCode.OK, it.status)
                 assertEquals("<html><body>success</body></html>", it.bodyAsText())
