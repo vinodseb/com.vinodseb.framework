@@ -9,3 +9,5 @@ build
 
 # Ignore node_modules
 node_modules
+
+main.css.map
