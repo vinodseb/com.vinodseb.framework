@@ -12,7 +12,7 @@ abstract class BaseClient(engine: HttpClientEngine) {
         HttpClient(engine) {
             install(ContentNegotiation) {
                 gson {
-                    setDateFormat(DateFormat.LONG)
+                    setDateFormat(DateFormat.DEFAULT, DateFormat.DEFAULT)
                     setPrettyPrinting()
                 }
             }

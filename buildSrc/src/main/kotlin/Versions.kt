@@ -1,5 +1,5 @@
 
-const val ktor_version = "3.0.0-beta-2"
+const val ktor_version = "3.0.1"
 const val logback_version = "1.5.7"
 const val kotlin_version = "2.0.20-RC2"
 const val versions_version = "0.51.0"
