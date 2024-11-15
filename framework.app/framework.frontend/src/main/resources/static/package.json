@@ -18,11 +18,11 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "sass": "node-sass assets/sass/main.scss -o assets/css/",
+    "compile": "sass assets/sass/main.scss assets/css/main.css",
     "clean": "rimraf --glob node_modules"
   },
   "dependencies": {
-    "node-sass": ">=9.0",
+    "sass": "1.81.0",
     "rimraf": "^5.0.1"
   }
 }

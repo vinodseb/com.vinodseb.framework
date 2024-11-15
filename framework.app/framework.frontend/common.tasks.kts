@@ -27,7 +27,7 @@ tasks.register("sass") {
         exec {
             workingDir("src/main/resources/static")
             executable("npm")
-            args("run", "sass")
+            args("run", "compile")
         }
     }
 }

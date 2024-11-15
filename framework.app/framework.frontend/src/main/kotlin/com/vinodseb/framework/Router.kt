@@ -6,22 +6,22 @@ import com.vinodseb.framework.controller.renderContent
 import io.ktor.http.ContentType
 import io.ktor.server.http.content.staticResources
 import io.ktor.server.response.respondText
-import io.ktor.server.routing.Route
+import io.ktor.server.routing.Routing
 import io.ktor.server.routing.get
 import io.ktor.util.logging.KtorSimpleLogger
 
 private val Log = KtorSimpleLogger("Router")
 
-fun Route.faviconRoute() = staticResources("/favicon.ico", "static", "/images/favicon.svg")
+fun Routing.faviconRoute() = staticResources("/favicon.ico", "static", "/images/favicon.svg")
 
-fun Route.staticRoute() = staticResources("/static", "static")
+fun Routing.staticRoute() = staticResources("/static", "static")
 
-fun Route.testRoute() =
+fun Routing.testRoute() =
     get("/test") {
         call.respondText("<html><body>success</body></html>", ContentType.Text.Html)
     }
 
-fun Route.pageRoute(
+fun Routing.pageRoute(
     backendClient: BackendClient,
     rendererClient: RendererClient,
 ) = get("/{locale}/{path...}") {
