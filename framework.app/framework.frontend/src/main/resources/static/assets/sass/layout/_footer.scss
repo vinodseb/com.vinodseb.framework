@@ -1,11 +1,13 @@
+@use "../libs/functions";
+
 /* Footer */
 
 	#footer {
-	    border-top: solid 5px _palette(accent);
+	    border-top: solid 5px functions.palette(accent);
 	    padding: 1em 0 1em 0;
 	    text-align: center;
 		.copyright {
-			color: _palette(fg-light);
+			color: functions.palette(fg-light);
 			font-size: 0.9em;
 
 			a {

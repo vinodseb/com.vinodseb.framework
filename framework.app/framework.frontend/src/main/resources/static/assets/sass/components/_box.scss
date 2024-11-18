@@ -1,9 +1,11 @@
+@use "../libs/functions";
+
 /* Box */
 
 	.box {
-		border-radius: _size(border-radius);
-		border: solid 1px _palette(border);
-		margin-bottom: _size(element-margin);
+		border-radius: functions.size(border-radius);
+		border: solid 1px functions.palette(border);
+		margin-bottom: functions.size(element-margin);
 		padding: 1.5em;
 
 		> :last-child,
