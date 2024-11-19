@@ -1,6 +1,7 @@
 @use "../libs/breakpoints";
 @use "../libs/functions";
 @use "../libs/vendor";
+@use "sass:math";
 
 /* Type */
 
@@ -136,7 +137,7 @@
 		border-left: solid 3px functions.palette(border);
 		font-style: italic;
 		margin: 0 0 functions.size(element-margin) 0;
-		padding: (functions.size(element-margin) / 4) 0 (functions.size(element-margin) / 4) functions.size(element-margin);
+		padding: (math.div(functions.size(element-margin), 4)) 0 (math.div(functions.size(element-margin), 4)) functions.size(element-margin);
 	}
 
 	code {

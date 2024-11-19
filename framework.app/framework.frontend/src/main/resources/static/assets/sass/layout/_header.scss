@@ -1,6 +1,7 @@
 @use "../libs/breakpoints";
 @use "../libs/functions";
 @use "../libs/vendor";
+@use "sass:math";
 
 /* Header */
 
@@ -39,10 +40,10 @@
 			}
 
 			.icons {
-				height: (6.25em / 1.25);
-				line-height: (6.25em / 1.25);
+				height: math.div(6.25em, 1.25);
+				line-height: math.div(6.25em, 1.25);
 				position: absolute;
-				right: (-0.625em / 1.25);
+				right: math.div(-0.625em, 1.25);
 				top: 0;
 			}
 		}
